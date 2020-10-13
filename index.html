@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My To-do List</title>
+        <meta name="description" content="My first web app using JavaScript">
+        <meta name="keywords" content="To-do list web app">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="css/styles1.css", type="text/css">
+    </head>
+    <body>
+        <h2 id="title">To-do List</h2>
+        <div id="clearableTextfield">
+            <input type="search", id="textfield", placeholder="Add a task..."/>
+            <button type="submit", class="addButton", id="additem">Add</button> 
+            <div id="feedback"></div>
+        </div>
+
+        <hr id="lineBreak">
+
+        <h3 id="currentList">Today's Task</h3>
+
+        <div id="todolist"> 
+
+            <ul id="UList">
+                <li id="list">Practise the codes<input type="checkbox" id="check"><button id="deleteTask">X</button></li>
+
+                <li id="list">JS is fun<input type="checkbox" id="check"><button id="deleteTask">X</button></li>
+            </ul>
+
+            <button type="button" id="clear-list">Clear Items</button>
+
+        </div>
+
+        <script src="javaScript/todo.js"></script>
+    </body>
+</html>
