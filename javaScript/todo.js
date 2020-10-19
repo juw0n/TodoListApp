@@ -37,7 +37,7 @@ function newTask1() {
         elNewEntry.value = '';
         elFeedbackMsg.innerHTML = '';
     } else {
-        elFeedbackMsg.innerHTML = 'enter a task';
+        elFeedbackMsg.innerHTML = 'You have to type a task!';
     }
 }
 elAddButton.addEventListener('click', newTask1, false);
@@ -52,7 +52,7 @@ function newTask(e) {
             elNewEntry.value = '';
             elFeedbackMsg.innerHTML = '';
         } else {
-            elFeedbackMsg.innerHTML = 'enter a task';
+            elFeedbackMsg.innerHTML = 'You have to type a task!';
         }
     } 
         
@@ -76,6 +76,7 @@ function elAddNewTodo(text) {
     var removeTask = document.createElement('button');
         removeTask.setAttribute('id', 'deleteTask');
         removeTask.textContent = 'X';
+        removeTask.addEventListener('click', deleteItemList, false);
     elNewList.appendChild(removeTask); 
 
     //elNewList.appendChild(newText);
@@ -102,28 +103,8 @@ function tickTask(e){
 }
 elUList.addEventListener('click', tickTask, false);
 
-/*
-function getTarget(e) {
-    if (!e) {
-        e = window.event;
-    } 
-    return e.target || e.srcElement;
+function deleteItemList() {
+    //alert('remove this Item!');
+    var li = this.parentNode;
+    li.remove();
 }
-
-function Delete(e) {
-    //Remove item from t he list
-    var target, elParent, elGrandparent;
-    target = document.getElementsByClassName('deleteTask');
-    elParent = target.parentNode;
-    elGrandparent = target.parentNode.parentNode;
-    elGrandparent.removeChild(elParent);
-}
-var container = document.getElementById('todolist')
-container.addEventListener('click', Delete, false);
-
-function deleteListItem(){
-    var li = document.getElementById('list');
-    var li = this.parentNode.parentNode;
-  li.remove();
-}
-*/
