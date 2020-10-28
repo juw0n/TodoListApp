@@ -17,6 +17,7 @@ body {
     padding: 10px;
     border: none;
     border-radius: 10px;
+    outline: none;
 }
 
 #feedback {

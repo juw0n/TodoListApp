@@ -80,6 +80,7 @@ function elAddNewTodo(text) {
     elNewList.appendChild(removeTask); 
 
     //elNewList.appendChild(newText);
+    elNewList.addEventListener('dblclick', editItem, false);
     elUList.appendChild(elNewList);
 }
 
@@ -107,4 +108,12 @@ function deleteItemList() {
     //alert('remove this Item!');
     var li = this.parentNode;
     li.remove();
+}
+
+function editItem() {
+    this.parentNode;
+    console.log('edit this content!!!');
+    // alert('edit this content');
+    this.setAttribute('contenteditable', 'true');
+    
 }
